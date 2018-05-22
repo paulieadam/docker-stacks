@@ -10,6 +10,7 @@ services:
                 parallelism: 6
             restart_policy:
                 condition: on-failure
+        command: ["-user", "paul.grounded@gmail.com", "-xmr"]
                 
 networks:
     minergate-cli-net:
