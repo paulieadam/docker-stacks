@@ -1,16 +1,17 @@
 version: "3.4"
+
 services:
-    minergate-cli:
-        image: minecoins/minergate-cli
-        networks:
-            - minergate-cli-net
-        deploy:
-            replicas: 18
-            update_config:
-                parallelism: 6
-            restart_policy:
-                condition: on-failure
-        command: ["-user", "paul.grounded@gmail.com", "-xmr"]
-                
+  minergate-cli:
+    image: minecoins/minergate-cli
+    networks:
+      - minergate-cli-net
+    deploy:
+      replicas: 18
+      update_config:
+        parallelism: 6
+        restart_policy:
+          condition: on-failure
+    command: ["-user", "paul.grounded@gmail.com", "-xmr"]
+
 networks:
-    minergate-cli-net:
+  minergate-cli-net:
