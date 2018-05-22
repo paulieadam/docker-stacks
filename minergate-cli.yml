@@ -10,13 +10,6 @@ services:
                 parallelism: 6
             restart_policy:
                 condition: on-failure
-        healthcheck:
-            test: ["CMD", "curl", "-f", "http://localhost:8080"]
-            interval: 1m30s
-            timeout: 10s
-            retries: 3
-            start_period: 1m
-        command: ["-user", "paul.grounded@gmail.com", "-xmr"]
-
+                
 networks:
     minergate-cli-net:
