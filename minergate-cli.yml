@@ -6,11 +6,11 @@ services:
     networks:
       - minergate-cli-net
     deploy:
-      replicas: 18
+      replicas: 7
       update_config:
-        parallelism: 6
-        restart_policy:
-          condition: on-failure
+        parallelism: 7
+      restart_policy:
+        condition: on-failure
     command: ["-user", "paul.grounded@gmail.com", "-xmr"]
 
 networks:
