@@ -6,9 +6,9 @@ services:
     networks:
       - minergate-cli-net
     deploy:
-      replicas: 7
+      replicas: 5
       update_config:
-        parallelism: 7
+        parallelism: 5
       restart_policy:
         condition: on-failure
     command: ["-user", "paul.grounded@gmail.com", "-xmr"]
